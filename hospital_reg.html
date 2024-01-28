@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Registration Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mooli&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Mooli', sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(9 50 118);
+            font-weight: 600;
+        }
+
+        .registration-form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 900px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .registration-form h1 {
+            text-align: center;
+            color: rgb(9 50 118);
+            font-family: 'Mooli', sans-serif;
+            text-shadow: 2px 2px 4px rgba(99, 94, 94, 0.5);
+
+        }
+
+        .main-form {
+            margin-top: 30px;
+        }
+
+        .form-group {
+            margin-top: 17px;
+            margin-bottom: 8px;
+        }
+
+        .registration-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .registration-form input[type="text"],
+        .registration-form input[type="date"],
+        .registration-form input[type="number"],
+        .registration-form input[type="email"],
+        .registration-form input[type="password"] {
+            font-family: 'Mooli', sans-serif;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .registration-form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-family: 'Mooli', sans-serif;
+            font-size: 15px;
+            color: rgb(18, 73, 160);
+        }
+
+        .required {
+            color: red;
+            margin-left: 2px;
+        }
+
+        #submit {
+            width: 100%;
+            background-color: rgb(119 172 226);
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-top: 40px;
+            height: 40px;
+            font-size: 18px;
+            letter-spacing: 1px;
+            font-weight: 600;
+            font-family: 'Mooli', sans-serif;
+            text-shadow: 2px 2px 4px rgba(8, 11, 85, 0.5);
+        }
+
+        #submit:hover {
+            background-color: #0056b3;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 12px;
+        }
+
+        .radio-group {
+            display: inline-block;
+            margin-right: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="registration-form">
+        <h1>Hospital Registration Form</h1>
+        <form onsubmit="return validateForm()">
+            <div class="main-form">
+
+                <div class="form-group">
+                    <label for="username">Hospital Name<span class="required">*</span> :</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Set Password<span class="required">*</span> :</label>
+                    <input type="password" id="password" name="password" minlength="8" required>
+                    <div class="error-message" id="passwordError"></div>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password<span class="required">*</span> :</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" minlength="8" required>
+                    <div class="error-message" id="confirmPasswordError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="contactNumber">Hospital Id<span class="required">*</span> :</label>
+                    <input type="text" id="hospital_id" name="hospital_id" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="aadharImage">Upload document for authorisation<span class="required">*</span> :</label>
+                    <input type="file" id="upload_document" name="upload_document" accept=".jpg, .jpeg, .png, .pdf"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="contactNumber">Contact Number<span class="required">*</span> :</label>
+                    <input type="text" id="contactNumber" name="contactNumber" maxlength="10" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="alternateContactNumber">Alternate Contact Number:</label>
+                    <input type="text" id="alternateContactNumber" name="alternateContactNumber" maxlength="10">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email<span class="required">*</span> :</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <div class="radio-group">
+                        <label for="option1">
+                            <input type="radio" id="option1" name="radiogroup" value="option1" required>
+                            Private Hospital
+                        </label><br>
+                    </div>
+                    <div class="radio-group">
+                        <label for="option2">
+                            <input type="radio" id="option2" name="radiogroup" value="option2">
+                            Government Hospital
+                        </label><br>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Address<span class="required">*</span> :</label>
+                    <textarea id="address" name="address" rows="3" cols="114" required></textarea>
+                </div>
+                <button type="submit" id="submit">Register</button>
+            </div>
+
+        </form>
+    </div>
+    <script>
+        function validateForm() {
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+            var passwordError = document.getElementById("passwordError");
+            var confirmPasswordError = document.getElementById("confirmPasswordError");
+
+            var uppercaseRegex = /[A-Z]/;
+            var specialCharacterRegex = /[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]/;
+            var numberRegex = /\d/;
+
+            if (!uppercaseRegex.test(password) || !specialCharacterRegex.test(password) || !numberRegex.test(password)) {
+                passwordError.innerHTML = "(Password must contain at least one uppercase letter, one special character, and one number)";
+                return false;
+            } else {
+                passwordError.innerHTML = "";
+            }
+
+            if (password !== confirmPassword) {
+                confirmPasswordError.innerHTML = "(Passwords do not match)";
+                return false;
+            } else {
+                confirmPasswordError.innerHTML = "";
+            }
+
+            return true;
+        }
+
+    </script>
+</body>
+
+</html>
