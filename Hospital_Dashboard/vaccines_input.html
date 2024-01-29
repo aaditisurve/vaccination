@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaccines</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .head {
+            width: 100%;
+            background: linear-gradient(40deg, #5a88bb, rgb(195, 210, 230));
+            height: 135px;
+        }
+
+        .heading {
+            width: 180px;
+            height: 50px;
+            /* border: 1px solid black; */
+            margin-left: 40px;
+            padding-left: 10px;
+            position: absolute;
+            top: 75px;
+        }
+
+        .heading h1 {
+            color: white;
+            text-shadow: 2px 2px 4px rgba(75, 111, 190, 0.934);
+            font-family: Arial, Helvetica, sans-serif;
+            letter-spacing: 0.5px;
+        }
+
+        .form-group {
+            margin-top: 17px;
+            margin-bottom: 8px;
+        }
+
+        .registration-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        p {
+            margin-top: 30px;
+            font-weight: 600;
+            color: rgb(55, 101, 174);
+            font-family: Arial, Helvetica, sans-serif;
+            letter-spacing: 0.5px;
+            margin-left: 50px;
+            font-size: 20px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="number"] {
+            font-family: Arial, Helvetica, sans-serif;
+            /* width: 100%; */
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        #dropdown {
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 20px;
+            /* display: inline-block; */
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+
+        .container {
+            display: flex;
+            /* align-items: center; */
+        }
+
+        .form-group {
+            font-weight: 600;
+            color: rgb(55, 101, 174);
+            margin-left: 48px;
+            margin-top: 30px;
+        }
+
+        #submit {
+            margin-left: 45px;
+            background-color: rgb(119 172 226);
+            color: #fff;
+            border: none;
+            padding: 5px;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-top: 20px;
+            height: 33px;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+            font-family: Arial, Helvetica, sans-serif;
+            text-shadow: 2px 2px 4px rgba(8, 11, 85, 0.5);
+        }
+
+        #submit:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="head">
+        <div class="heading">
+            <h1>Vaccines</h1>
+        </div>
+    </div>
+    <div class="container">
+        <p id="question">How many types of vaccines ?</p>
+        <select id="dropdown">
+            <option disabled selected value="">Select an option</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+    </div>
+
+    <div id="output1" style="display: none;">
+        <!-- Code to display when Option 1 is selected -->
+        <div class="form-group">
+            <form id="vaccineForm">
+
+                <label for="vaccineName">Vaccine Name :</label>
+                <input type="text" id="vaccineName" name="vaccineName" required><br>
+
+                <label for="quantityAvailable">Quantity Available :</label>
+                <input type="number" id="quantityAvailable" name="quantityAvailable" required><br>
+
+                <label for="fees">Fees :</label>
+                <input type="number" id="fees" name="fees" required><br>
+
+            </form>
+        </div>
+        <button type="submit" id="submit">Submit</button>
+    </div>
+    <div id="output2" style="display: none;">
+        <!-- Code to display when Option 2 is selected -->
+        <form id="vaccineForm">
+            <div class="form-group">
+                <label for="vaccineName">Vaccine Name :</label>
+                <input type="text" id="vaccineName" name="vaccineName" required><br>
+
+                <label for="quantityAvailable">Quantity Available :</label>
+                <input type="number" id="quantityAvailable" name="quantityAvailable" required><br>
+
+                <label for="fees">Fees :</label>
+                <input type="number" id="fees" name="fees" required><br>
+            </div>
+            <div class="form-group">
+                <label for="vaccineName">Vaccine Name :</label>
+                <input type="text" id="vaccineName" name="vaccineName" required><br>
+
+                <label for="quantityAvailable">Quantity Available :</label>
+                <input type="number" id="quantityAvailable" name="quantityAvailable" required><br>
+
+                <label for="fees">Fees :</label>
+                <input type="number" id="fees" name="fees" required><br>
+            </div>
+        </form>
+        <button type="submit" id="submit">Submit</button>
+    </div>
+    <div id="output3" style="display: none;">
+        <!-- Code to display when Option 3 is selected -->
+        <form id="vaccineForm">
+            <div class="form-group">
+                <label for="vaccineName">Vaccine Name :</label>
+                <input type="text" id="vaccineName" name="vaccineName" required><br>
+
+                <label for="quantityAvailable">Quantity Available :</label>
+                <input type="number" id="quantityAvailable" name="quantityAvailable" required><br>
+
+                <label for="fees">Fees :</label>
+                <input type="number" id="fees" name="fees" required><br>
+            </div>
+            <div class="form-group">
+                <label for="vaccineName">Vaccine Name :</label>
+                <input type="text" id="vaccineName" name="vaccineName" required><br>
+
+                <label for="quantityAvailable">Quantity Available :</label>
+                <input type="number" id="quantityAvailable" name="quantityAvailable" required><br>
+
+                <label for="fees">Fees :</label>
+                <input type="number" id="fees" name="fees" required><br>
+            </div>
+            <div class="form-group">
+                <label for="vaccineName">Vaccine Name :</label>
+                <input type="text" id="vaccineName" name="vaccineName" required><br>
+
+                <label for="quantityAvailable">Quantity Available :</label>
+                <input type="number" id="quantityAvailable" name="quantityAvailable" required><br>
+
+                <label for="fees">Fees :</label>
+                <input type="number" id="fees" name="fees" required><br>
+            </div>
+        </form>
+        <button type="submit" id="submit">Submit</button>
+    </div>
+    <div id="output4" style="display: none;">
+        <!-- Code to display when Option 4 is selected -->
+        <form id="vaccineForm">
+            <div class="form-group">
+                <label for="vaccineName">Vaccine Name :</label>
+                <input type="text" id="vaccineName" name="vaccineName" required><br>
+
+                <label for="quantityAvailable">Quantity Available :</label>
+                <input type="number" id="quantityAvailable" name="quantityAvailable" required><br>
+
+                <label for="fees">Fees :</label>
+                <input type="number" id="fees" name="fees" required><br>
+            </div>
+            <div class="form-group">
+                <label for="vaccineName">Vaccine Name :</label>
+                <input type="text" id="vaccineName" name="vaccineName" required><br>
+
+                <label for="quantityAvailable">Quantity Available :</label>
+                <input type="number" id="quantityAvailable" name="quantityAvailable" required><br>
+
+                <label for="fees">Fees :</label>
+                <input type="number" id="fees" name="fees" required><br>
+            </div>
+            <div class="form-group">
+                <label for="vaccineName">Vaccine Name :</label>
+                <input type="text" id="vaccineName" name="vaccineName" required><br>
+
+                <label for="quantityAvailable">Quantity Available :</label>
+                <input type="number" id="quantityAvailable" name="quantityAvailable" required><br>
+
+                <label for="fees">Fees :</label>
+                <input type="number" id="fees" name="fees" required><br>
+            </div>
+            <div class="form-group">
+                <label for="vaccineName">Vaccine Name :</label>
+                <input type="text" id="vaccineName" name="vaccineName" required><br>
+
+                <label for="quantityAvailable">Quantity Available :</label>
+                <input type="number" id="quantityAvailable" name="quantityAvailable" required><br>
+
+                <label for="fees">Fees :</label>
+                <input type="number" id="fees" name="fees" required><br>
+            </div>
+        </form>
+        <button type="submit" id="submit">Submit</button>
+    </div>
+    <div id="output5" style="display: none;">
+        <!-- Code to display when Option 5 is selected -->
+        <form id="vaccineForm">
+            <div class="form-group">
+                <label for="vaccineName">Vaccine Name:</label>
+                <input type="text" id="vaccineName" name="vaccineName" required><br>
+
+                <label for="quantityAvailable">Quantity Available:</label>
+                <input type="number" id="quantityAvailable" name="quantityAvailable" required><br>
+
+                <label for="fees">Fees:</label>
+                <input type="number" id="fees" name="fees" required><br>
+            </div>
+            <div class="form-group">
+                <label for="vaccineName">Vaccine Name:</label>
+                <input type="text" id="vaccineName" name="vaccineName" required><br>
+
+                <label for="quantityAvailable">Quantity Available:</label>
+                <input type="number" id="quantityAvailable" name="quantityAvailable" required><br>
+
+                <label for="fees">Fees:</label>
+                <input type="number" id="fees" name="fees" required><br>
+            </div>
+            <div class="form-group">
+                <label for="vaccineName">Vaccine Name:</label>
+                <input type="text" id="vaccineName" name="vaccineName" required><br>
+
+                <label for="quantityAvailable">Quantity Available:</label>
+                <input type="number" id="quantityAvailable" name="quantityAvailable" required><br>
+
+                <label for="fees">Fees:</label>
+                <input type="number" id="fees" name="fees" required><br>
+            </div>
+            <div class="form-group">
+                <label for="vaccineName">Vaccine Name:</label>
+                <input type="text" id="vaccineName" name="vaccineName" required><br>
+
+                <label for="quantityAvailable">Quantity Available:</label>
+                <input type="number" id="quantityAvailable" name="quantityAvailable" required><br>
+
+                <label for="fees">Fees:</label>
+                <input type="number" id="fees" name="fees" required><br>
+            </div>
+            <div class="form-group">
+                <label for="vaccineName">Vaccine Name:</label>
+                <input type="text" id="vaccineName" name="vaccineName" required><br>
+
+                <label for="quantityAvailable">Quantity Available:</label>
+                <input type="number" id="quantityAvailable" name="quantityAvailable" required><br>
+
+                <label for="fees">Fees:</label>
+                <input type="number" id="fees" name="fees" required><br>
+            </div>
+        </form>
+        <button type="submit" id="submit">Submit</button>
+    </div>
+
+
+    <script>
+        const dropdown = document.getElementById("dropdown");
+        const outputs = {
+            1: document.getElementById("output1"),
+            2: document.getElementById("output2"),
+            3: document.getElementById("output3"),
+            4: document.getElementById("output4"),
+            5: document.getElementById("output5")
+        };
+
+        dropdown.addEventListener("change", function () {
+            const selectedOption = dropdown.value;
+
+            // Hide all output divs
+            for (const output of Object.values(outputs)) {
+                output.style.display = "none";
+            }
+
+            // Show the selected output div
+            if (outputs[selectedOption]) {
+                outputs[selectedOption].style.display = "block";
+            }
+        });
+    </script>
+</body>
+
+</html>

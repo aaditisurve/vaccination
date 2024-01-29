@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>My Blog</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(40deg, #5a88bb, rgb(195, 210, 230));
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .blog-post {
+            background-color: #f9f9f9;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .post-title {
+            font-size: 24px;
+        }
+
+        .post-date {
+            color: #777;
+        }
+
+        footer {
+            background: linear-gradient(40deg, #5a88bb, rgb(195, 210, 230));
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>My Blog</h1>
+    </header>
+    <main>
+        <article class="blog-post">
+            <h2 class="post-title">The Power of Child Vaccines : Protecting Our Future</h2>
+            <p class="post-date">Published on July 1, 2023</p>
+            <p class="post-content">
+                On-time vaccination throughout childhood is essential because it helps provide immunity before children
+                are exposed to potentially life-threatening diseases.<br>
+                In 2021, about 25.69 percent of the Indian population fell into the 0-14 year category. The infant
+                mortality rate is found out to be about 24.5 (infant deaths per 1,000 live births) while deaths under
+                the age of 5 have been about 30.6 (per 1,000 live births).<br>
+                India has made a whole lot of progress in this field over the years.
+                Despite the progress, infectious diseases continue to contribute to a significant proportion of child
+                mortality and morbidity in India.
+
+            </p>
+            <button class="read-more">Read More</button>
+        </article>
+    </main>
+    <footer>
+        <p>&copy; 2023 My Blog</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const readMoreButtons = document.querySelectorAll(".read-more");
+
+            readMoreButtons.forEach((button) => {
+                button.addEventListener("click", function () {
+                    if (button.nextElementSibling && button.nextElementSibling.classList.contains("more-info")) {
+                        button.nextElementSibling.remove();
+                        this.textContent = "Read More";
+                    } else {
+                        const moreInfo = document.createElement("p");
+                        moreInfo.innerHTML = "Understanding Child Vaccines:<br><br>Child vaccines, also known as immunizations or vaccinations, are biological preparations that stimulate a child's immune system to produce an immune response to a specific pathogen, such as bacteria or viruses. These vaccines typically contain a small, weakened, or inactivated portion of the pathogen or a similar protein. When a child is exposed to the vaccine, their immune system recognizes it as foreign and produces antibodies to fight it off. The beauty of vaccines is that they provide immunity without causing the disease itself. This immune response teaches the body to recognize and respond effectively to the pathogen if the child is ever exposed to it in the future.<br><br>Key Childhood Vaccines: <br><br>Numerous vaccines are recommended for children, with the specific schedule varying by country. However, some common and critical childhood vaccines include:<br>Measles, Mumps, and Rubella (MMR): Protects against measles, mumps, and rubella.<br>Diphtheria, Tetanus, and Pertussis (DTaP): Protects against diphtheria, tetanus, and whooping cough.<br>Polio: Protects against poliovirus.<br>Hepatitis B: Protects against the hepatitis B virus.<br>Haemophilus Influenzae Type b (Hib): Protects against Hib infections.<br>Influenza: An annual vaccine to protect against seasonal flu.<br>Rotavirus: Protects against severe diarrhea and vomiting caused by rotavirus.<br>Pneumococcal: Protects against diseases like pneumonia, meningitis, and ear infections.<br>Chickenpox (Varicella): Protects against chickenpox.<br>Human Papillomavirus (HPV): Protects against certain types of HPV that can cause cancer.";
+                        moreInfo.classList.add("more-info");
+                        button.parentElement.appendChild(moreInfo);
+                        this.textContent = "Read Less";
+                    }
+                });
+            });
+        });
+
+    </script>
+</body>
+
+</html>

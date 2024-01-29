@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: 'Mooli', sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(9 50 118);
+    font-weight: 600;
+}
+
+.registration-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 900px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.registration-form h1 {
+    text-align: center;
+    color: rgb(9 50 118);
+    font-family: 'Mooli', sans-serif;
+    text-shadow: 2px 2px 4px rgba(99, 94, 94, 0.5);
+
+}
+
+.main-form {
+    margin-top: 30px;
+}
+
+.form-group {
+    margin-top: 17px;
+    margin-bottom: 8px;
+}
+
+.registration-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.registration-form input[type="text"],
+.registration-form input[type="date"],
+.registration-form input[type="number"],
+.registration-form input[type="email"],
+.registration-form input[type="password"] {
+    font-family: 'Mooli', sans-serif;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.registration-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-family: 'Mooli', sans-serif;
+    font-size: 15px;
+    color: rgb(18, 73, 160);
+}
+
+#child{
+    width: 10%;
+    background-color: #0056b3;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    height: 40px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-family: 'Mooli', sans-serif;
+    text-shadow: 2px 2px 4px rgba(8, 11, 85, 0.5);
+
+}
+
+#submit{
+    width: 100%;
+    background-color: rgb(119 172 226);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 40px;
+    height: 40px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-family: 'Mooli', sans-serif;
+    text-shadow: 2px 2px 4px rgba(8, 11, 85, 0.5);
+}
+
+#submit:hover {
+    background-color: #0056b3;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+}
+
+.required {
+    color: red;
+    /* Change the color as needed */
+    margin-left: 2px;
+    /* Adjust the margin for spacing */
+}

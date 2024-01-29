@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Hospitals and Vaccines</h1>
+    <div class="filter">
+        <label for="priceRange">Price Range:</label>
+        <select id="priceRange">
+            <option value="0-100">Below $100</option>
+            <option value="100-200">$100 - $200</option>
+            <option value="200-300">$200 - $300</option>
+            <option value="300-999">Above $300</option>
+        </select>
+        <label for="vaccine">Vaccine:</label>
+        <select id="vaccine">
+            <option value="vaccineA">Vaccine A</option>
+            <option value="vaccineB">Vaccine B</option>
+            <option value="vaccineC">Vaccine C</option>
+        </select>
+        <button onclick="filterHospitals()">Filter</button>
+    </div>
+    <table id="hospitalTable">
+        <thead>
+            <tr>
+                <th>Hospital Name</th>
+                <th>Vaccines</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="hospitalList">
+            <!-- Hospital information will be displayed here -->
+        </tbody>
+    </table>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <header  height=100vh>
+        <div id="header">
+            <a href="home.html">
+                <img src="Free_Sample_By_Wix-removebg-preview.png" alt="logo" id="logo" >
+            </a>
+            <div id="hbuttons" style="float: left;" align:centre>
+                <a href="home.html"><button class="b">HOME</button></a>
+                <a href="au.html"><button class="b">ABOUT US</button></a>
+                <button class="b">HELP</button>
+            </div>
+            <a href="profile.html">
+                <div style="padding-left: 1400px;">
+                    <button class="i"><img src="profile.png" class="i"></button>
+                </div>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <h1 style="text-align: center;">YOUR POFILE</h1>
+        <div>
+        <form style=" background-image: linear-gradient(rgb(175, 232, 245), rgb(231, 246, 249));">
+            <div class="main-form" style="padding-left: 500px; padding-right: 500px;">
+                <h2>Parent/Guardian Information</h2>
+
+                <div class="form-group">
+                    <label id="pName"></label>
+                    <script>
+                    var name = "John";
+                    document.getElementById("pName").innerHTML = "Name: " + name;
+                    </script>
+                </div>
+
+                <div class="form-group">
+                    <label id="relation"></label>
+                    <script>
+                    var relation = "Father";
+                    document.getElementById("relation").innerHTML = "Relation with Child: " + relation;
+                    </script>
+                </div>
+
+                <div class="form-group">
+                    <label id="contact"></label>
+                    <script>
+                    var contact = "1234567890";
+                    document.getElementById("contact").innerHTML = "Contact Number: " + contact;
+                    </script>
+                </div>
+
+                <div class="form-group">
+                    <label id="altContact"></label>
+                    <script>
+                    var altContact = "2345678901";
+                    document.getElementById("altContact").innerHTML = "Alternate Contact Number: " + altContact;
+                    </script>
+                </div>
+
+                <div class="form-group">
+                    <label id="email"></label>
+                    <script>
+                    var email = "john@gmail.com";
+                    document.getElementById("email").innerHTML = "Email: " + email;
+                    </script>
+                </div>
+
+                <div class="form-group">
+                    <label id="address"></label>
+                    <script>
+                    var address = "230/B, Haha society";
+                    document.getElementById("address").innerHTML = "Address: " + address;
+                    </script>
+                </div>
+
+                <div class="form-group">
+                    <label id="email"></label>
+                    <script>
+                    var email = "john@gmail.com";
+                    document.getElementById("email").innerHTML = "Email: " + email;
+                    </script>
+                </div>
+
+                <div class="form-group">
+                    <label id="aadharNumber"></label>
+                    <script>
+                    var aadharNumber = "123456789012";
+                    document.getElementById("aadharNumber").innerHTML = "Aadhar Card Number: " + aadharNumber;
+                    </script>
+                </div>
+
+            <br>
+            <hr>
+                <h2>Child Information</h2>
+                <div class="childReg">
+                    <label for="childName">Name:</label>
+                </div>
+
+                <div class="childReg">
+                    <label for="dateOfBirth">Date of Birth:</label>
+                </div>
+
+                <div class="childReg">
+                    <label for="height">Height:</label>
+                </div>
+
+                <div class="childReg">
+                    <label for="weight">Weight:</label>
+                </div>
+
+                <div class="childReg">
+                    <label for="aadharNumber">Child's Aadhar Card Number: </label>
+                </div>
+                
+                <div class="childReg" style="padding-bottom: 10px;">
+                    <label for="medicalHistory">Medical History (if any):</label>
+                </div>
+            </div>
+            <button>Edit</button>
+        </form>
+    </div>
+    </main>
+
+</body>
+</html>

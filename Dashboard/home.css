@@ -1,0 +1,63 @@
+#logo {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    float: left;
+}
+
+
+#hbuttons {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-left: 800px;
+}
+
+.b {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: medium;
+    color: rgba(1, 1, 1, 0.701);
+    background-color: white;
+    border: none;
+    padding: 10px;
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+#h{
+    border-bottom: 1px solid blue;
+}
+
+.b:hover{
+    background-color: rgb(237, 241, 243);
+}
+.i {
+    padding: 2px;
+    height: 50px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#header {
+    box-shadow: 5px 5px 10px rgb(235, 234, 234);
+}
+
+.gridHome {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 70px;  
+    padding-left: 120px;
+}
+
+.gH {
+    border-radius: 20px;
+    height: 250px;
+    width: 400px;
+}
+a{
+    text-decoration: none;
+    color: #24094b;
+}

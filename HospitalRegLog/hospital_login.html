@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mooli&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        body {
+            /* background-image: url('gif.gif');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed; */
+            /* backdrop-filter: blur(10px); */
+            width: 100%;
+            height: 100%;
+        }
+
+        /* .gif{
+            width: 100%;
+            height: 100%;
+            filter: blur(10px);
+        } */
+
+        .container {
+            width: 1000px;
+            height: 510px;
+            border: 2px solid black;
+            /* position: absolute;
+            top:100px;
+            left:100px; */
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 120px;
+            background-image: url('hospital.png');
+            /* filter: blur(2px); */
+            /* background-repeat: no-repeat; */
+            /* background-size: cover; */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-form {
+            width: 378px;
+            height: 507px;
+            /* border: 1px solid black; */
+            filter: none;
+            z-index: 2;
+            position: absolute;
+            left: 54rem;
+            background-color: white;
+            /* border-left: 1px solid black; */
+        }
+
+        h1 {
+            text-align: center;
+            padding-top: 60px;
+            color: rgb(9 50 118);
+            font-family: 'Mooli', sans-serif;
+            text-shadow: 2px 2px 4px rgba(99, 94, 94, 0.5);
+        }
+
+        .login-2 {
+            margin-top: 50px;
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .form-group {
+            padding-top: 30px;
+            padding-left: 22px;
+        }
+
+        #hospital_id,
+        #password {
+            width: 220px;
+            height: 40px;
+            padding-left: 20px;
+            margin-left: 13px;
+            font-family: 'Mooli', sans-serif;
+            font-size: 15px;
+        }
+
+        #submit {
+            margin-top: 10px;
+            width: 250px;
+            height: 38px;
+            background-color: rgb(119 172 226);
+            /* color: rgb(9 50 118); */
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            font-family: 'Mooli', sans-serif;
+            text-shadow: 2px 2px 4px rgba(8, 11, 85, 0.5);
+        }
+
+        #submit:hover {
+            background-color: #0056b3;
+            /* color: grey; */
+            cursor: pointer;
+        }
+
+        .user {
+            font-family: 'Mooli', sans-serif;
+            /* text-align: center; */
+            margin-top: 35px;
+            font-size: 16px;
+            margin-left: 23px;
+            color: rgb(9 50 118);
+            font-weight: 500;
+        }
+
+        .span {
+            float: right;
+            margin-right: 28px;
+        }
+
+        .span:hover {
+            color: rgb(9 50 118);
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        a {
+            text-decoration: none;
+            color: rgb(9 50 118);
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="login-form">
+            <h1>Hospital Login</h1>
+            <form action="login.php" method="POST">
+                <div class="login-2">
+                    <div class="form-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="hospital_id" name="hospital_id" placeholder="Hospital Id" required>
+                    </div>
+                    <div class="form-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="password" name="password" placeholder="Password" minlength="8"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Login" id="submit">
+                    </div>
+                    <p class="user">New User? <a href="hospital_reg.html" target="_blank"><span class="span">Register
+                                now</span></a></p>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+    
+</body>
+
+</html>

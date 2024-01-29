@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registration Form</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Mooli&display=swap" rel="stylesheet">  
+        <link rel="stylesheet" href="register_style.css">
+        <script src="register_script.js"></script>
+    </head>
+
+    <body>
+        <div class="registration-form">
+            <h1>Registration Form</h1>
+            <form onsubmit="return validateForm()">
+                <div class="main-form">
+                    <h2>Parent/Guardian Information</h2>
+                    <div class="form-group">
+                        <label for="username">Username<span class="required">*</span> :</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Set Password<span class="required">*</span> :</label>
+                        <input type="password" id="password" name="password" minlength="8" required>
+                        <div class="error-message" id="passwordError"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password<span class="required">*</span>:</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" minlength="8" required>
+                        <div class="error-message" id="confirmPasswordError"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="parentName">Parent/Guardian's Name<span class="required">*</span> :</label>
+                        <input type="text" id="parentName" name="parentName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="parentName">Parent/Guardian's Relationship with Child<span class="required">*</span> :</label>
+                        <input type="text" id="parentName" name="parentName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactNumber">Contact Number<span class="required">*</span> :</label>
+                        <input type="text" id="contactNumber" name="contactNumber" maxlength="10" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="alternateContactNumber">Alternate Contact Number:</label>
+                        <input type="text" id="alternateContactNumber" name="alternateContactNumber" maxlength="10">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email<span class="required">*</span> :</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Address<span class="required">*</span> :</label>
+                        <textarea id="address" name="address" rows="3" cols="114" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="aadharNumber">Parent/Guardian's Aadhar Card Number<span class="required">*</span>
+                            :</label>
+                        <input type="text" id="aadharNumber" name="aadharNumber" pattern="[0-9]{12}" maxlength="12"
+                            placeholder="Enter 12-digit Parent's/ Guardian's Aadhar Card number" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="aadharImage">Upload Parent/Guardian's Aadhar Card<span class="required">*</span>
+                            :</label>
+                        <input type="file" id="aadharImage" name="aadharImage" accept=".jpg, .jpeg, .png" required>
+                    </div>
+                    <br>
+                <hr>
+                    <br>
+                    <h2>Child Information</h2>
+                    <div style="padding-bottom: 20px; padding-top: 20px;">
+                    <div class="childReg">
+                        <label for="childName">Child's Name<span class="required">*</span> :</label>
+                        <input type="text" id="childName" name="childName" required>
+                    </div>
+
+                    <div class="childReg">
+                        <label for="dateOfBirth">Date of Birth<span class="required">*</span> :</label>
+                        <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+                    </div>
+
+                    <div class="childReg">
+                        <label for="height">Height:</label>
+                        <input type="text" id="height" name="height" placeholder="Enter height in cm.">
+                    </div>
+
+                    <div class="childReg">
+                        <label for="weight">Weight:</label>
+                        <input type="text" id="weight" name="weight" placeholder="Enter weight in kg.">
+                    </div>
+
+                    <div class="childReg">
+                        <label for="aadharNumber">Child's Aadhar Card Number: </label>
+                        <input type="text" id="aadharNumber" name="aadharNumber" pattern="[0-9]{12}" maxlength="12"
+                            placeholder="Enter 12-digit Father's Aadhar Card number">
+                    </div>
+
+                    <div class="childReg" style="padding-bottom: 12px;">
+                        <label for="aadharImage">Upload Child's Aadhar Card: </label>
+                        <input type="file" id="aadharImage" name="aadharImage" accept=".jpg, .jpeg, .png">
+                    </div>
+
+                    <div class="childReg" style="padding-bottom: 10px;">
+                        <label for="birthCertificate">Upload Birth Certificate</label>
+                        <input type="file" id="birthCertificate" name="birthCertificate" accept=".jpg, .jpeg, .png, .pdf">
+                    </div>
+                    
+                    <div class="childReg" style="padding-bottom: 10px;">
+                        <label for="medicalHistory">Medical History (if any):</label>
+                        <textarea id="medicalHistory" name="medicalHistory" rows="6" cols="114"></textarea>
+                    </div>
+                </div>
+                    <hr> <br>
+
+                    <div id="childR"></div>
+                    <button id="child">Add Child</button>
+
+                    <script>
+                            let x = `<div class="childReg">
+                                        <label for="childName">Child's Name<span class="required">*</span> :</label>
+                                        <input type="text" id="childName" name="childName" required>
+                                    </div>
+
+                                    <div class="childReg">
+                                        <label for="dateOfBirth">Date of Birth<span class="required">*</span> :</label>
+                                        <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+                                    </div>
+                                    <div class="childReg">
+                                        <label for="aadharNumber">Child's Aadhar Card Number: </label>
+                                        <input type="text" id="aadharNumber" name="aadharNumber" pattern="[0-9]{12}" maxlength="12"
+                                            placeholder="Enter 12-digit Father's Aadhar Card number">
+                                    </div>
+                                    <div class="childReg" style="padding-bottom: 12px;">
+                                        <label for="aadharImage">Upload Child's Aadhar Card: </label>
+                                        <input type="file" id="aadharImage" name="aadharImage" accept=".jpg, .jpeg, .png">
+                                    </div>
+                                    <div class="childReg" style="padding-bottom: 10px;">
+                                        <label for="birthCertificate">Upload Birth Certificate</label>
+                                        <input type="file" id="birthCertificate" name="birthCertificate" accept=".jpg, .jpeg, .png, .pdf">
+                                    </div>
+                                    <div class="childReg" style="padding-bottom: 10px;">
+                                        <label for="medicalHistory">Medical History (if any):</label>
+                                        <textarea id="medicalHistory" name="medicalHistory" rows="6" cols="114"></textarea>
+                                    </div>
+                                    <hr> <br>`;
+                            
+                                document.getElementById("child").
+                                addEventListener("click", function () {
+                                    document.getElementById("childR").
+                                    innerHTML += x;
+                            });
+                    </script>
+
+                    <button type="submit" id="submit">Register</button>
+
+                </div>
+            </form>
+        </div>
+    </body>
+
+</html>
